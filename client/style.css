@@ -1,0 +1,25 @@
+.utama {
+    justify-content : center;
+    width: 100%;
+    
+}
+
+.isikartu {
+    min-height: 50px;
+}
+
+#backlog {
+    background-color: red;
+}
+
+#product {
+    background-color: green;
+}
+
+#development {
+    background-color: blue;
+}
+
+#done {
+    background-color: yellow;
+}
