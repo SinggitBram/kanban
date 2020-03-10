@@ -10,53 +10,122 @@
     <title>Document</title>
 </head>
 
-<body style="background-color:purple">
+<body style="background-color: #75707a;
+background-image: url(https://www.transparenttextures.com/patterns/back-pattern.png)">
 
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<nav id = "navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Kanban</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="task">
+    <button id="addtask" type="submit" class="btn btn-info mt-3">Add Task</button>
+  </div>
 
     <div class="d-flex container mt-3">
         <div class="utama d-flex row ">
             <div id=backlog class="kartu col rounded mx-1">
-                <h6 class="mt-1">Backlog</h6>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
-                    task1
+                <div class ="judulkartu rounded">
+                    <h6 class="mt-1">Backlog</h6>
+
                 </div>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
-                    task2
+                <div  class="isikartu bg-white rounded my-2">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima possimus doloribus suscipit illo amet exercitationem dolorem atque odit iusto rerum, culpa quam voluptas quia ad! Neque quae libero quas optio?
+
+                    </p>
                 </div>
-                <div><a href="">add a Task...</a></div>
+                <div  class="isikartu bg-white rounded my-2">
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed impedit animi veniam excepturi repellat facere nostrum ipsum voluptas corporis inventore temporibus itaque totam omnis, quibusdam natus delectus sunt neque earum.
+                    </p>
+                </div>
+                <div  class="isikartu bg-white rounded my-2">
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed impedit animi veniam excepturi repellat facere nostrum ipsum voluptas corporis inventore temporibus itaque totam omnis, quibusdam natus delectus sunt neque earum.
+                    </p>
+                </div>
+                <div  class="isikartu bg-white rounded my-2">
+                    <p>
+
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed impedit animi veniam excepturi repellat facere nostrum ipsum voluptas corporis inventore temporibus itaque totam omnis, quibusdam natus delectus sunt neque earum.
+                    </p>
+                </div>
+            
             </div>
             <div id=product class="kartu col rounded mx-1">
                 <h6 class="mt-1">Product</h6>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task1
                 </div>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task2
                 </div>
-                <div><a href="">add a Task...</a></div>
+         
             </div>
             <div id=development class="kartu col rounded mx-1">
                 <h6 class="mt-1">Development</h6>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task1
                 </div>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task2
                 </div>
-                <div><a href="">add a Task...</a></div>
+          
             </div>
             <div id=done class="kartu col rounded mx-1">
                 <h6 class="mt-1">Done</h6>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task1
                 </div>
-                <div id=isibacklog class="isikartu bg-white rounded my-2">
+                <div  class="isikartu bg-white rounded my-2">
                     task2
                 </div>
-                <div><a href="">add a Task...</a></div>
+              
             </div>
         </div>
+
     </div>
+
 
 
 
