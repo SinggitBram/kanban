@@ -94,11 +94,11 @@ class TaskController {
     static deleteTask = (req, res) => {
         let id = Number(req.params.id)
         let temp = null
-        task.findByPk(id)
+        Task.findByPk(id)
             .then(data => {
                 temp = data
                 if (data) {
-                    return task.destroy({
+                    return Task.destroy({
                         where: {
                             id: id
                         }

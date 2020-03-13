@@ -66,7 +66,7 @@ class UserController {
 
                         } else {
                             return User.create({
-                                username: payload.given_name,
+                                name: payload.name,
                                 email: payload.email,
                                 password: "12345"
                             })
@@ -80,16 +80,11 @@ class UserController {
                         next(err)
                     })
             })
-
             .catch(err => {
                 next(err)
             })
     }
 
 }
-
-
-
-
 
 module.exports = UserController

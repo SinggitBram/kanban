@@ -19,7 +19,7 @@
             <button v-on:click="swaploginregister" id="tombolregister" class="btn btn-success">Go to
                 Register</button>
         </div>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <GoogleLogin :params="params" :renderParams="renderParams" :onSuccess="onSuccess" :onFailure="onFailure"></GoogleLogin>
     </div>
 
     <div v-if="register_login" id="divregister" class="container">
@@ -35,22 +35,30 @@
             </div>
             <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input v-model="registerpassword" type="password" class="form-control" placeholder="Login" id="passwordregister"
+                <input v-model="registerpassword" type="password" class="form-control" placeholder="Password" id="passwordregister"
                     name="password">
+                    <input type="checkbox" @click="myfunction">Show Password
             </div>
             <button id="tombolsubmitregister" type="submit" class="btn btn-primary">Submit</button>
         </form>
         <div>
             <button v-on:click="swaploginregister" id="tombollogin" class="btn btn-success">Go to Login</button>
         </div>
+        <div>
+              <GoogleLogin :params="params" :renderParams="renderParams" :onSuccess="onSuccess" :onFailure="onFailure"></GoogleLogin>
+        </div>
 </div>
   </div>
 </template>
 
 <script>
+import GoogleLogin from 'vue-google-login';
 import axios from "axios"
 var baseURL = `http://localhost:3000`
 export default{
+    components: {
+            GoogleLogin
+        },
     data: function(){
         return{
         
@@ -59,10 +67,23 @@ export default{
         loginpassword: ``,
         registername: ``,
         registeremail: ``,
-        registerpassword: ``
+        registerpassword: ``,
+        params: {
+                client_id: "29760818398-00bf5bm48dua8i04uii7sgjf1fmd2n1i.apps.googleusercontent.com"
+                },
+                renderParams: {
+                    width: 250,
+                    height: 50,
+                    longtitle: true
+                }
         }  
     },
     methods: {
+
+        onSuccess(tokengoogle){
+            var id_token = tokengoogle.getAuthResponse().id_token;
+            this.$emit("googlebind", id_token)
+        },
         submitlogin() {
             axios({
                 method: 'post',
@@ -74,7 +95,13 @@ export default{
             })
                 .then(result => {
                     localStorage.setItem(`token`, result.data.token)
-                    this.$emit('statustoken', true)
+                    this.loginemail = ``;
+                    this.loginpassword = ``;
+                    this.registername = ``;
+                    this.registeremail = ``;
+                    this.registerpassword = ``;
+                    this.$emit('statustoken', true);
+
                 })
                 .catch(err => {
                     console.log(err)
@@ -85,6 +112,14 @@ export default{
                 this.register_login = false
             } else {
                 this.register_login = true
+            }
+        },
+        myfunction(){
+            var x = document.getElementById("passwordregister");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
             }
         },
         submitregister(){
@@ -99,7 +134,13 @@ export default{
             })
                 .then(result => {
                     localStorage.setItem(`token`, result.data.token)
-                    this.$emit('statustoken', true)
+                    this.loginemail = ``;
+                    this.loginpassword = ``;
+                    this.registername = ``;
+                    this.registeremail = ``;
+                    this.registerpassword = ``;
+                    this.$emit('statustoken', true);
+
                 })
                 .catch(err => {
                     console.log(err)
