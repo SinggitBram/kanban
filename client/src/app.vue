@@ -48,7 +48,7 @@
 </template>
 
 <script>
-var baseURL = `http://localhost:3000`;
+var baseURL = `https://morning-ocean-05803.herokuapp.com/`;
 
 import axios from "axios";
 import Login from "./components/login.vue";
@@ -78,7 +78,7 @@ export default {
     inisigngoogle(tokengoogle){
       axios({
                 method: "post",
-                url: `${baseURL}/users/googlelogin`,
+                url: `${baseURL}users/googlelogin`,
                 data: {
                     token: tokengoogle
                 }
@@ -94,7 +94,7 @@ export default {
     submitaddtask(){
       axios({
         method: "post",
-        url: `${baseURL}/tasks`,
+        url: `${baseURL}tasks`,
         data: {
           title: this.addtitle,
           category : this.addcategory,
@@ -118,7 +118,7 @@ export default {
     gettask() {
       axios({
         method: "get",
-        url: `${baseURL}/tasks`,
+        url: `${baseURL}tasks`,
         headers: { token: localStorage.getItem("token") }
       })
         .then(result => {

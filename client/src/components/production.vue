@@ -54,7 +54,7 @@
 
 <script>
 import axios from "axios";
-var baseURL = `http://localhost:3000`;
+var baseURL = `https://morning-ocean-05803.herokuapp.com/`;
 export default {
   props: ["task"],
   computed: {
@@ -76,7 +76,7 @@ export default {
     deleteTask(idku) {
       axios({
         method: "delete",
-        url: `${baseURL}/tasks/${idku}`,
+        url: `${baseURL}tasks/${idku}`,
         headers: { token: localStorage.getItem("token") }
       })
       .then(result => {
@@ -89,7 +89,7 @@ export default {
     submitedittask(){
         axios({
         method: "put",
-        url: `${baseURL}/tasks/${this.iduntukedit}`,
+        url: `${baseURL}tasks/${this.iduntukedit}`,
         data:{
           title: this.edittitle,
           category : this.editcategory,

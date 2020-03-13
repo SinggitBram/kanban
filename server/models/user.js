@@ -5,7 +5,18 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notNull: { msg: 'Please fill in all fields' },
+        notEmpty: { msg: 'Please fill in all fields' },
+        len: {
+          args: 6,
+          msg: 'Password must be at least 6 characters'
+        }
+      }
+    }
   }, {
     hooks: {
       beforeCreate: (instance, option) => {

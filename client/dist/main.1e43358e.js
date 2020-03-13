@@ -11983,7 +11983,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   components: {
     GoogleLogin: _vueGoogleLogin.default
@@ -12016,7 +12016,7 @@ var _default = {
 
       (0, _axios.default)({
         method: 'post',
-        url: "".concat(baseURL, "/users/login"),
+        url: "".concat(baseURL, "users/login"),
         data: {
           email: this.loginemail,
           password: this.loginpassword
@@ -12055,7 +12055,7 @@ var _default = {
 
       (0, _axios.default)({
         method: 'post',
-        url: "".concat(baseURL, "/users/register"),
+        url: "".concat(baseURL, "users/register"),
         data: {
           name: this.registername,
           email: this.registeremail,
@@ -12461,7 +12461,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   props: ["task"],
   computed: {
@@ -12486,7 +12486,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "delete",
-        url: "".concat(baseURL, "/tasks/").concat(idku),
+        url: "".concat(baseURL, "tasks/").concat(idku),
         headers: {
           token: localStorage.getItem("token")
         }
@@ -12501,7 +12501,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "put",
-        url: "".concat(baseURL, "/tasks/").concat(this.iduntukedit),
+        url: "".concat(baseURL, "tasks/").concat(this.iduntukedit),
         data: {
           title: this.edittitle,
           category: this.editcategory,
@@ -12865,7 +12865,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   props: ["task"],
   computed: {
@@ -12890,7 +12890,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "delete",
-        url: "".concat(baseURL, "/tasks/").concat(idku),
+        url: "".concat(baseURL, "tasks/").concat(idku),
         headers: {
           token: localStorage.getItem("token")
         }
@@ -12905,7 +12905,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "put",
-        url: "".concat(baseURL, "/tasks/").concat(this.iduntukedit),
+        url: "".concat(baseURL, "tasks/").concat(this.iduntukedit),
         data: {
           title: this.edittitle,
           category: this.editcategory,
@@ -13273,7 +13273,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   props: ["task"],
   computed: {
@@ -13298,7 +13298,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "delete",
-        url: "".concat(baseURL, "/tasks/").concat(idku),
+        url: "".concat(baseURL, "tasks/").concat(idku),
         headers: {
           token: localStorage.getItem("token")
         }
@@ -13313,7 +13313,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "put",
-        url: "".concat(baseURL, "/tasks/").concat(this.iduntukedit),
+        url: "".concat(baseURL, "tasks/").concat(this.iduntukedit),
         data: {
           title: this.edittitle,
           category: this.editcategory,
@@ -13681,7 +13681,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   props: ["task"],
   computed: {
@@ -13706,7 +13706,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "delete",
-        url: "".concat(baseURL, "/tasks/").concat(idku),
+        url: "".concat(baseURL, "tasks/").concat(idku),
         headers: {
           token: localStorage.getItem("token")
         }
@@ -13721,7 +13721,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "put",
-        url: "".concat(baseURL, "/tasks/").concat(this.iduntukedit),
+        url: "".concat(baseURL, "tasks/").concat(this.iduntukedit),
         data: {
           title: this.edittitle,
           category: this.editcategory,
@@ -14088,7 +14088,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var baseURL = "http://localhost:3000";
+var baseURL = "https://morning-ocean-05803.herokuapp.com/";
 var _default = {
   components: {
     Login: _login.default,
@@ -14112,7 +14112,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "post",
-        url: "".concat(baseURL, "/users/googlelogin"),
+        url: "".concat(baseURL, "users/googlelogin"),
         data: {
           token: tokengoogle
         }
@@ -14128,7 +14128,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "post",
-        url: "".concat(baseURL, "/tasks"),
+        url: "".concat(baseURL, "tasks"),
         data: {
           title: this.addtitle,
           category: this.addcategory,
@@ -14153,7 +14153,7 @@ var _default = {
 
       (0, _axios.default)({
         method: "get",
-        url: "".concat(baseURL, "/tasks"),
+        url: "".concat(baseURL, "tasks"),
         headers: {
           token: localStorage.getItem("token")
         }
@@ -14527,7 +14527,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45339" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35017" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

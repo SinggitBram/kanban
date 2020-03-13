@@ -1,7 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Task = sequelize.define('Task', {
-    title: DataTypes.STRING,
+    title: {
+      type: DataTypes.STRING,
+      validate: {
+        customValidator(value) {
+          if (value === null || value === '') {
+            throw new Error("title tidak boleh kosong")
+          }
+        }
+      }
+    },
     category: DataTypes.STRING,
     description: DataTypes.STRING,
     userId: DataTypes.INTEGER

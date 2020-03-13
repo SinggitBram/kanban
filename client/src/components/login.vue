@@ -54,7 +54,7 @@
 <script>
 import GoogleLogin from 'vue-google-login';
 import axios from "axios"
-var baseURL = `http://localhost:3000`
+var baseURL = `https://morning-ocean-05803.herokuapp.com/`
 export default{
     components: {
             GoogleLogin
@@ -87,7 +87,7 @@ export default{
         submitlogin() {
             axios({
                 method: 'post',
-                url: `${baseURL}/users/login`,
+                url: `${baseURL}users/login`,
                 data: {
                     email: this.loginemail,
                     password: this.loginpassword
@@ -125,7 +125,7 @@ export default{
         submitregister(){
             axios({
                 method: 'post',
-                url: `${baseURL}/users/register`,
+                url: `${baseURL}users/register`,
                 data: {
                     name: this.registername,
                     email: this.registeremail,
